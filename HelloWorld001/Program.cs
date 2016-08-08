@@ -10,7 +10,7 @@ namespace HelloWorld001
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!"); // comment from git
             Console.Read(); // some comments
         }
     }
