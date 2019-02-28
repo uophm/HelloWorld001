@@ -28,6 +28,7 @@ namespace HelloWorld001
                             // Oleg 003
 
             // VS001
+            // VS002
 
         }
     }
