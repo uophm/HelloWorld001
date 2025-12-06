@@ -1,7 +1,7 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
+    "version": "2.0.0",
+    "tasks": [
+        {
             "label": "build", // THIS IS THE CRITICAL LABEL
             "command": "dotnet",
             "type": "process",
@@ -11,44 +11,55 @@
                 // ... other arguments
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build web",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/HelloWorldWeb/HelloWorldWeb.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "Transform XML with xsltproc (bash)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-ic",
+                "xsltproc '${workspaceFolder}/path/to/stylesheet.xsl' '${file}' > '${workspaceFolder}/out.html'"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Transform XML with Saxon (java -jar)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-ic",
+                "java -jar /path/to/saxon-he.jar -s:'${file}' -xsl:'${workspaceFolder}/path/to/stylesheet.xsl' -o:'${workspaceFolder}/out.xml'"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "type": "dotnet",
+            "task": "build",
+            "group": "build",
+            "problemMatcher": [],
+            "label": "dotnet: build"
         }
-    ,
-    {
-        "label": "Transform XML with xsltproc (bash)",
-        "type": "shell",
-        "command": "bash",
-        "args": [
-            "-ic",
-            "xsltproc '${workspaceFolder}/path/to/stylesheet.xsl' '${file}' > '${workspaceFolder}/out.html'"
-        ],
-        "presentation": {
-            "echo": true,
-            "reveal": "always",
-            "panel": "shared"
-        },
-        "problemMatcher": []
-    },
-    {
-        "label": "Transform XML with Saxon (java -jar)",
-        "type": "shell",
-        "command": "bash",
-        "args": [
-            "-ic",
-            "java -jar /path/to/saxon-he.jar -s:'${file}' -xsl:'${workspaceFolder}/path/to/stylesheet.xsl' -o:'${workspaceFolder}/out.xml'"
-        ],
-        "presentation": {
-            "echo": true,
-            "reveal": "always",
-            "panel": "shared"
-        },
-        "problemMatcher": []
-    },
-    {
-        "type": "dotnet",
-        "task": "build",
-        "group": "build",
-        "problemMatcher": [],
-        "label": "dotnet: build"
-    }
-]
+    ]
 }

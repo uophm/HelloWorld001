@@ -33,8 +33,26 @@
             "type": "dotnet",
             "request": "launch",
             "projectPath": "${workspaceFolder}/HelloWorldLinux/HelloWorldLinux.csproj"
+        },
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build web",
+            "program": "${workspaceFolder}/HelloWorldWeb/bin/Debug/net8.0/HelloWorldWeb.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/HelloWorldWeb",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/HelloWorldWeb/Views"
+            }
         }
-
-
     ]
 }
