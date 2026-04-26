@@ -7,7 +7,7 @@ class Program
 {
     Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
     static int Main(string[] args)
-    {
+    {continue pre
         Console.WriteLine("Hello from HelloWorldLinux!");
         Console.WriteLine($"OS: {RuntimeInformation.OSDescription}");
         Console.WriteLine($"Is Linux: {RuntimeInformation.IsOSPlatform(OSPlatform.Linux)}");
