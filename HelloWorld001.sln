@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbProjectExample", "DbProje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbProjectExample.Tests", "DbProjectExample.Tests\DbProjectExample.Tests.csproj", "{3D8DD0E7-B005-4B5C-80AD-BAFFC7D0C874}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetirementRealityCheck", "RetirementRealityCheck\RetirementRealityCheck.csproj", "{4D2A277E-D3B6-485C-BC73-FE876A7D0433}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3D8DD0E7-B005-4B5C-80AD-BAFFC7D0C874}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D8DD0E7-B005-4B5C-80AD-BAFFC7D0C874}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D8DD0E7-B005-4B5C-80AD-BAFFC7D0C874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D2A277E-D3B6-485C-BC73-FE876A7D0433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D2A277E-D3B6-485C-BC73-FE876A7D0433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D2A277E-D3B6-485C-BC73-FE876A7D0433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D2A277E-D3B6-485C-BC73-FE876A7D0433}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
